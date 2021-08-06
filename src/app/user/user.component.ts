@@ -3,6 +3,7 @@ interface UserInterface {
   name:string;
   age: string;
   id:number;
+  isColored:boolean;
 }
 @Component({
   selector: 'app-user',
@@ -12,16 +13,20 @@ interface UserInterface {
 export class UserComponent implements OnInit {
   
   @Input() user:UserInterface;
-  @Output() userEvent: EventEmitter<UserInterface>;
+  @Output() userCustomEvent: EventEmitter<UserInterface>;
+  isColored:boolean=false;
   constructor() { 
-    this.userEvent=new EventEmitter<UserInterface>();
+    this.userCustomEvent=new EventEmitter<UserInterface>();
     this.user={} as UserInterface;
+    
   }
 
   ngOnInit(): void {
+    // Los estilos van en el ngOninit
+    this.isColored=this.user.isColored?true:false;
   }
   sendUserEvent():void{
-    this.userEvent.emit(this.user);
+    this.userCustomEvent.emit(this.user);
   }
 
 }

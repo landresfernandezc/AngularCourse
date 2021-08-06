@@ -1,3 +1,5 @@
-<h1>{{user.name}}</h1>
+<!-- <h1>{{user.name}}</h1>
 <h1>{{user.age}}</h1>
-<h1>{{user.id}}</h1>
+<h1>{{user.id}}</h1> -->
+<div [ngClass]="isColored ? 'colored': ''">Atribute directive</div>
+<button (click)="sendUserEvent()">Send User event</button>
