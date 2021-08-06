@@ -1,0 +1,19 @@
+
+
+<!-- * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * -->
+<!-- * * * * * * * * * * * The content above * * * * * * * * * * * -->
+<!-- * * * * * * * * * * is only a placeholder * * * * * * * * * * -->
+<!-- * * * * * * * * * * and can be replaced. * * * * * * * * * * * -->
+<!-- * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * -->
+<!-- * * * * * * * * * * End of Placeholder * * * * * * * * * * * -->
+<!-- * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * -->
+
+<!-- <h1>{{title | uppercase}} </h1>
+<h1>{{jsonValue | json}} </h1>
+<h1>{{newDate | date:'medium'}} </h1>
+<h1>{{title  |  truncate}}</h1>
+<button (click)="handleEvent()"> Click Me</button>
+<input  [(ngModel)]="title" /> -->
+<input placeholder="user" [(ngModel)]="userObject.name">
+<app-user [user]="userObject" (userEvent)="handleEvent($event)"></app-user>
+<!---<router-outlet></router-outlet>--->
